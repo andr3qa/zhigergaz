@@ -1,2 +1,86 @@
 .header {
+  padding: 25px 0;
+  background: linear-gradient(180deg, #ddecff 0%, #f6faff 51.04%, #ddecff 100%);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 29px 0;
+  }
+
+  &__logo {
+    justify-self: center;
+  }
+}
+
+.header-item {
+  padding-top: 5px;
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: #13284f;
+  }
+
+  &__p {
+    margin: 6px 0 0;
+    font-weight: 400;
+    font-size: 18px;
+    color: $secondColor;
+  }
+
+  &_right {
+    justify-self: end;
+
+    .header-item__title {
+      text-align: right;
+    }
+  }
+
+  @include media(900) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  grid-column: 1 / 4;
+
+  &__link {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    color: #85888f;
+    transition: 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      border-radius: 10px;
+      width: 100%;
+      height: 2px;
+      color: $mainColor;
+      background-color: $mainColor;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      color: $mainColor;
+
+      &::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+
+  @include media(900) {
+    display: none;
+  }
 }
