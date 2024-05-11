@@ -104,4 +104,25 @@
   &:active {
     background-color: darken($mainColor, 10%);
   }
+
+  &_trans {
+    border: 1px solid $mainColor;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    color: $mainColor;
+    background: transparent;
+
+    &:hover {
+      border-color: #fff;
+      color: #fff;
+      background-color: darken($secondColor, 5%);
+    }
+
+    &:active {
+      border-color: #fff;
+      color: #fff;
+      background-color: darken($secondColor, 10%);
+    }
+  }
 }
