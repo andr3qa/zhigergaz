@@ -50,4 +50,8 @@
   font-size: 38px;
   text-align: center;
   color: $mainColor;
+
+  &_white {
+    color: #fff;
+  }
 }
