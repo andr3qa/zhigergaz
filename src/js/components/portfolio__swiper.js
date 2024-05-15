@@ -11,4 +11,5 @@ const swiper = new Swiper(".portfolio__swiper", {
   spaceBetween: 10,
   slidesPerView: 1,
   loop: true,
+  grabCursor: true,
 });
