@@ -125,4 +125,18 @@
       background-color: darken($secondColor, 10%);
     }
   }
+
+  &_white {
+    color: $secondColor;
+    background: #fff;
+
+    &:hover {
+      color: #fff;
+      background: $secondColor;
+    }
+
+    &:active {
+      background: darken($secondColor, 10%);
+    }
+  }
 }
