@@ -43,11 +43,11 @@
   }
 }
 
-.swiper-slide {
+.licenses__swiper-slide {
   text-align: center;
 }
 
-.swiper-slide .licenses__img {
+.licenses__swiper-slide .licenses__img {
   max-width: 50%;
   transform: scale(1);
   transition: 0.3s;
@@ -63,7 +63,7 @@
   transition: 0.3s;
 }
 
-.swiper {
+.licenses__swiper {
   overflow: visible;
 }
 
