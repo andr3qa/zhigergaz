@@ -4,6 +4,10 @@
   padding: 81px 0 76px;
   background: linear-gradient(180deg, #ddecff 0%, #f6faff 51.04%, #ddecff 100%);
 
+  @include media(900) {
+    padding: 50px 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -17,9 +21,14 @@
   }
 
   &__container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px 0;
+
+    @include media(900) {
+      display: block;
+    }
   }
 
   &__section-title {
@@ -30,23 +39,80 @@
     align-self: center;
   }
 
-  &__line {
+  &__img {
+    @include media(900) {
+      display: block;
+      margin: 30px auto 0;
+      max-width: 300px;
+    }
+  }
+
+  &__pointer {
     position: absolute;
-    left: 377px;
-    top: 222px;
-    width: 309px;
-    height: 147px;
-    background: no-repeat center / cover url("./../img/gazgolders__line.webp");
+    border-bottom: 1px dotted #85888f;
+    height: 1px;
+
+    @include media(1200) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -4px;
+      border-radius: 100%;
+      width: 10px;
+      height: 10px;
+      background: $secondColor;
+    }
+
+    &_1 {
+      left: 190px;
+      top: 245px;
+      width: 34%;
+      transform: rotate(-14deg);
+    }
+
+    &_2 {
+      left: 178px;
+      top: 326px;
+      width: 37%;
+      transform: rotate(-4deg);
+    }
+
+    &_3 {
+      left: 228px;
+      top: 429px;
+      width: 34%;
+      transform: rotate(1deg);
+    }
+
+    &_4 {
+      left: 366px;
+      top: 545px;
+      width: 18%;
+      transform: rotate(22deg);
+    }
   }
 
   &__list {
     align-self: center;
+
+    @include media(900) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+    }
   }
 
   &__item {
     position: relative;
     z-index: 1;
     margin-top: 50px;
+
+    @include media(900) {
+      margin-left: 50px;
+    }
 
     &:nth-child(2) {
       margin-left: 50px;

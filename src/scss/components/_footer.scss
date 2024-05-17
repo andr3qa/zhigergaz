@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 57px 0;
+
+    @include media(900) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -28,6 +32,11 @@
   &__logo {
     justify-self: end;
     grid-column: 4 / 5;
+
+    @include media(900) {
+      justify-self: center;
+      grid-column: auto;
+    }
   }
 }
 
@@ -38,6 +47,10 @@
   grid-template-columns: repeat(5, 1fr);
   max-width: 300px;
   gap: 30px;
+
+  @include media(900) {
+    grid-column: auto;
+  }
 
   &__link {
     display: block;
@@ -69,6 +82,11 @@
 .contacts {
   grid-column: 4 / 5;
   grid-row: 1 / 2;
+
+  @include media(900) {
+    grid-column: auto;
+    grid-row: auto;
+  }
 
   &__item {
     display: flex;

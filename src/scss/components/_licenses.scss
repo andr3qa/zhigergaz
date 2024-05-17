@@ -4,6 +4,10 @@
   padding: 50px 0 57px;
   background: no-repeat center / cover url("./../img/licenses__bg.webp");
 
+  @include media(600) {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -91,11 +95,19 @@
 
     &_next {
       right: 0;
+
+      @include media(1200) {
+        right: 10%;
+      }
     }
 
     &_prev {
       left: 0;
       transform: rotate(180deg);
+
+      @include media(1200) {
+        left: 10%;
+      }
     }
   }
 

@@ -11,6 +11,10 @@
     border-bottom: 1px solid #c6e0ff;
     padding: 25px 30px;
 
+    @include media(900) {
+      padding: 25px 0;
+    }
+
     &_active {
       .questions__title {
         &::before {
@@ -52,6 +56,10 @@
       color: $secondColor;
       background: #ddecff;
       transition: all 0.3s ease-out;
+
+      @include media(900) {
+        display: none;
+      }
     }
   }
 

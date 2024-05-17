@@ -2,10 +2,17 @@
   padding: 50px 0 25px;
   background: linear-gradient(180deg, #ddecff 0%, #f6faff 51.04%, #ddecff 100%);
 
+  @include media(900) {
+    padding-top: 300px;
+  }
+
   &__items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
     margin-top: 38px;
+    gap: 30px;
   }
 
   &__item {
@@ -50,6 +57,10 @@
   font-size: 38px;
   text-align: center;
   color: $mainColor;
+
+  @include media(600) {
+    font-size: 28px;
+  }
 
   &_white {
     color: #fff;

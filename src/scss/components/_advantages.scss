@@ -22,10 +22,16 @@
 
   &__container {
     display: grid;
-
-    // justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 55px 50px;
+
+    @include media(1200) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(900) {
+      grid-template-columns: 1fr;
+    }
 
     & > * {
       justify-self: end;
@@ -35,11 +41,28 @@
   &__section-title {
     justify-self: center;
     grid-column: 1 / 4;
+
+    @include media(1200) {
+      grid-column: 1 / 3;
+    }
+
+    @include media(900) {
+      grid-column: auto;
+    }
   }
 
   &__item {
     position: relative;
     max-width: 270px;
+
+    @include media(1200) {
+      justify-self: start;
+      margin-left: 100px;
+    }
+
+    @include media(900) {
+      max-width: 100%;
+    }
 
     &::before {
       content: "";
@@ -98,6 +121,10 @@
     font-weight: 500;
     font-size: 28px;
     color: #fff;
+
+    @include media(400) {
+      font-size: 24px;
+    }
   }
 
   &__item-p {
@@ -105,5 +132,9 @@
     font-weight: 400;
     font-size: 14px;
     color: #fff;
+
+    @include media(400) {
+      display: none;
+    }
   }
 }

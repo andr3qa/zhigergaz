@@ -8,7 +8,7 @@ const swiper = new Swiper(".portfolio__swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  spaceBetween: 10,
+  spaceBetween: 30,
   slidesPerView: 1,
   loop: true,
   grabCursor: true,

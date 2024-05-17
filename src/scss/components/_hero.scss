@@ -73,6 +73,14 @@
       margin: 310px auto 0;
       max-width: 230px;
     }
+
+    @include media(600) {
+      margin-top: 360px;
+    }
+
+    @include media(400) {
+      margin-top: 413px;
+    }
   }
 
   &__btn {
