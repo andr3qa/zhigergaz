@@ -3,13 +3,19 @@
   background: linear-gradient(180deg, #ddecff 0%, #f6faff 51.04%, #ddecff 100%);
 
   &__container {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
     gap: 29px 0;
   }
 
   &__logo {
     justify-self: center;
+
+    @include media(900) {
+      grid-column: 2 / 3;
+    }
   }
 }
 
@@ -82,5 +88,76 @@
 
   @include media(900) {
     display: none;
+  }
+}
+
+.burger {
+  @include burger;
+
+  z-index: 200;
+  display: none;
+  align-self: center;
+  height: 21px;
+
+  @include media(900) {
+    display: block;
+  }
+
+  &::before,
+  &::after,
+  &__line {
+    background-color: $mainColor;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  left: -31%;
+  top: 0;
+  z-index: 100;
+  display: none;
+  padding: 110px 15px 30px;
+  color: #fff;
+  background-color: $fontColor;
+  opacity: 0;
+  transition: 0.3s;
+
+  &_active {
+    left: 0;
+    opacity: 1;
+  }
+
+  @include media(900) {
+    display: block;
+  }
+
+  @include media(400) {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    font-size: 18px;
+    color: $secondColor;
+
+    &:nth-child(2) {
+      margin-top: 100px;
+    }
+
+    &:last-child {
+      margin-top: 50px;
+    }
+  }
+}
+
+.mobile-nav {
+  &__item {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
   }
 }

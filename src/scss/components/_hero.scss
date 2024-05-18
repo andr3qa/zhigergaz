@@ -6,6 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  // @include media(400) {
+  //   margin-top: 114px;
+  // }
+
   &::before {
     content: "";
     position: absolute;
