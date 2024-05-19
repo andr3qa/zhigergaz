@@ -1,14 +1,11 @@
 .hero {
   position: relative;
+  margin-top: 114px;
   padding: 65px 0;
   background-image: url("./../img/hero__bg.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  // @include media(400) {
-  //   margin-top: 114px;
-  // }
 
   &::before {
     content: "";
