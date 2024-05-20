@@ -135,9 +135,14 @@
     color: $mainColor;
   }
 
+  &__input-wrap {
+    position: relative;
+  }
+
   &__fieldset {
     border: 1px solid #c4c4c4;
     border-radius: 5px;
+    height: 57px;
 
     &:not(:first-child) {
       margin-top: 20px;
@@ -149,9 +154,16 @@
   }
 
   &__input {
+    position: absolute;
+    left: 10px;
+    top: 22px;
     outline: none;
     border: none;
-    width: 100%;
+    width: 91%;
+
+    &:focus-visible ~ .form__fieldset {
+      border-color: $secondColor;
+    }
   }
 
   &__btn {

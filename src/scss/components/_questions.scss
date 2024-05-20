@@ -35,10 +35,15 @@
 
   &__title {
     position: relative;
+    display: block;
     margin: 0;
+    border: none;
+    width: 100%;
     font-weight: 500;
     font-size: 24px;
+    text-align: left;
     color: $secondColor;
+    background-color: transparent;
     cursor: pointer;
 
     &::before {
